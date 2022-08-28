@@ -70,10 +70,14 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
+The interactive device that I am prototyping is a chameleon toy that will read the color of the background that it is put in front of and change color to blend in. The setting is anywhere the user chooses to place the device, but for the purpose of example I will be sticking with areas around a home during the day. The main players are the user(s) and the device, as most bystanders might not even notice the device because of how well it blends in! The users should take to care to avoid getting in the way of anyone else while using the device, however. The activity is as follows: the user will place the device in a location of their choosing, and then the device with automatically sense the color of the area that it was placed in and change its color to blend in. As stated, the goal of the device is to blend in with its surroundings. The goal of the user is to make it so others do not notice the device.
+
 
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
 
 \*\***Include pictures of your storyboards here**\*\*
+![Storyboards 1-4](/storyboards/storyboard1-4.HEIC "Storyboards 1-4")
+![Storyboards 5-7](/storyboards/storyboard5-7.HEIC "Storyboards 5-7")
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
