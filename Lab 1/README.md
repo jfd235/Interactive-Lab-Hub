@@ -57,82 +57,67 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. Plan 
 
-To stage an interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
-
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
-
 \*\***Describe your setting, players, activity and goals here.**\*\*
+
 The interactive device that I am prototyping is a chameleon toy that will read the color of the background that it is put in front of and change color to blend in. The setting is anywhere the user chooses to place the device, but for the purpose of example I will be sticking with areas around a home during the day. The main players are the user(s) and the device, as most bystanders might not even notice the device because of how well it blends in! The users should take to care to avoid getting in the way of anyone else while using the device, however. The activity is as follows: the user will place the device in a location of their choosing, and then the device with automatically sense the color of the area that it was placed in and change its color to blend in. As stated, the goal of the device is to blend in with its surroundings. The goal of the user is to make it so others do not notice the device.
 
-
-Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
-
 \*\***Include pictures of your storyboards here**\*\*
-![Storyboards 1-4](./storyboards/storyboard1-4.png "Storyboards 1-4")
-![Storyboards 5-7](./storyboards/storyboard5-7.png "Storyboards 5-7")
 
-Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
+![Storyboards 1-4](./images/storyboard1-4.png "Storyboards 1-4")
+![Storyboards 5-7](./images/storyboard5-7.png "Storyboards 5-7")
 
 \*\***Summarize feedback you got here.**\*\*
+
+One thing that might be a good idea is a more extensive UI. Currently there is no button to power on/off, no indication of a sleep function, no indication of volume control, etc. Furthemore, it is not specified how the brightness of the device will adapt to low light/bright settings in order to aid in blending in.
 
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
-
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 
+To act out the interaction, I simply used Tinkerbell to match the phone color with the background color. One thing that stands out is that it might be a good idea to have some sort of interface to indicate when to change color to blend in with the background.
+
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+
+I think the original feedback is reinforced, that it would be helpful to include some kind of user interface to better control the device.
 
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
-
 \*\***Give us feedback on Tinkerbelle.**\*\*
+I thought it ran pretty smoothly, the only thing I found odd was I had to restart it a few times in order for it to work on my phone. Other than that I had no problems.
 
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+[![Device Wizarding]](https://drive.google.com/file/d/1Dv6p8K7cJp-_OiqcWRwPrkeZXu1VrVlM/view?usp=sharing)
 
 \*\***Show the follow-up work here.**\*\*
+
+The biggest problem I ran into was trying to find a good way to stand up the device. In the video above, I simply had it resting against another object. To streamline this, I added a kickstand to the back of the device. See the costume sketch below for a visual example.
 
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop three costumes so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
-
 \*\***Include sketches of what your devices might look like here.**\*\*
 
+![Costume Sketches](./images/costumeSketches.png "Costume Sketches")
+
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
+
+Since the device is meant to be hidden, I wanted to avoid having too many costume components that would make the device stand out. So I kept it simple and added eyes in kind of a camo green color, and a transluscent tail. If I had more resources, I would probably try and find items that were completely transparent, or somehow extend the color changing properties to these items. Another option would be to just try and add the costume components digitally to the screen itself.
 
 
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
+[![Prototype]](https://drive.google.com/file/d/1T4XjXjlTxjxsIthOTso3aCJW3oed_wSv/view?usp=sharing)
+
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+Thanks to my friends for giving feedback on my initial device design.
 
 
 
