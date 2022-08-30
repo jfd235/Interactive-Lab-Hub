@@ -117,6 +117,7 @@ Since the device is meant to be hidden, I wanted to avoid having too many costum
 [![Prototype](./images/prototypeThumbnail.png)](https://drive.google.com/file/d/1T4XjXjlTxjxsIthOTso3aCJW3oed_wSv/view?usp=sharing)
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+
 Thanks to my friends for giving feedback on my initial device design.
 
 
