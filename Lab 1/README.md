@@ -92,7 +92,7 @@ I thought it ran pretty smoothly, the only thing I found odd was I had to restar
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-[![Device Wizarding]](https://drive.google.com/file/d/1Dv6p8K7cJp-_OiqcWRwPrkeZXu1VrVlM/view?usp=sharing)
+[![Device Wizarding](./images/wizardingThumbnail.png)](https://drive.google.com/file/d/1Dv6p8K7cJp-_OiqcWRwPrkeZXu1VrVlM/view?usp=sharing)
 
 \*\***Show the follow-up work here.**\*\*
 
@@ -114,7 +114,7 @@ Since the device is meant to be hidden, I wanted to avoid having too many costum
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-[![Prototype]](https://drive.google.com/file/d/1T4XjXjlTxjxsIthOTso3aCJW3oed_wSv/view?usp=sharing)
+[![Prototype](./images/prototypeThumbnail.png)](https://drive.google.com/file/d/1T4XjXjlTxjxsIthOTso3aCJW3oed_wSv/view?usp=sharing)
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 Thanks to my friends for giving feedback on my initial device design.
