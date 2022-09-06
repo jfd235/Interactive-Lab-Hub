@@ -156,4 +156,4 @@ I looked into possible new devices, but I decided to stick with my original cham
 
 [![Final Prototype](./images/finalPrototypeThumbnail.png)](https://drive.google.com/file/d/17G6X1utlBZ06h9hxWVnp7UDSR4hJ9X2I/view?usp=sharing)
 
-Special thanks to Ken Alvarez for the expert cinematography
+Special thanks to Ken Alvarez for the expert cinematography.
