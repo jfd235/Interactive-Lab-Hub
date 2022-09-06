@@ -132,6 +132,13 @@ This describes the second week's work for this lab activity.
 You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
 \*\***Summarize feedback from your partners here.**\*\*
+Joseph Anthony Iovine, Jr: I really like your video! I think I have a pretty good understanding of what your device is and the goal is clearly outlined in the video. It looks like a camera is interpreting the color of the object presented to it and providing a digital match to that color. I think this is a cool idea and you can even expand on it in the next part of this lab by providing applications to this device, digital art is one thing that comes to mind. One question I do have that I sort of touched on is what is the scene that this is occurring in? The device objective is obvious, but what is trying to be accomplished by using this device?
+
+
+Sylvia Ding: Seems like the device can detect the object placed behind and changes color when the camera detects the color of the object. Just wondering what will happen if the object has more than one color on its surface?
+
+
+Christy Wu: Hi! Your idea sounds really interesting! I like how you also considered the situation where there are multiple color show on the background. And the hide&seek game idea was really great. It sounds cool that the device can play a sounds when lost, but how would it identify whether it is lost? Will there be a button on phone or something to make it mark as lost and start to play sounds? I'd love to see that in the video! All the other thing looks great and I look forward to see your future progress!
 
 ## Make it your own
 
@@ -141,3 +148,12 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+
+![New Storyboards 1-4](./images/newStoryboard1-4.png "New Storyboards 1-4")
+![NewStoryboards 5-7](./images/newStoryboard5-7.png "New Storyboards 5-7")
+
+I looked into possible new devices, but I decided to stick with my original chameleon idea. The biggest change I made was that the color would now change gradually, as opposed to abruptly or randomly. To prototype this interaction, I modified the Tinkerbell code to allow for preset smooth transitions that I was able to time with the video to give the illusion of the device actually working. After seeing it on video, I think the interaction actually worked out pretty well. You can check out how it looks below!
+
+[![Final Prototype](./images/finalPrototypeThumbnail.png)](https://drive.google.com/file/d/17G6X1utlBZ06h9hxWVnp7UDSR4hJ9X2I/view?usp=sharing)
+
+Special thanks to Ken Alvarez for the expert cinematography
