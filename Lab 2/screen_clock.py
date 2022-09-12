@@ -42,8 +42,12 @@ rotation = 90
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
 
+# Time variable
+stress = 0
+emote = ":-)"
+
 # Draw a black filled box to clear the image.
-draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+draw.rectangle((0, 0, width, height), outline=0, fill=(int(stress*2.55), 200 - stress*2, 0))
 disp.image(image, rotation)
 # Draw some shapes.
 # First define some constants to allow easy resizing of shapes.
@@ -63,16 +67,17 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
-# Time variable
-stress = 0
-emote = ":-)"
-
 while True:
     # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    #draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.rectangle((0, 0, width, height), outline=0, fill=(int(stress*2.55), 200 - stress*2, 0))
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
     y = top
+    draw.text((x, y), str("How Stressed Are You?"), font=font, fill="#FFFFFF")
+    y += font.getsize("str")[1]
+    draw.text((x, y), str("-"), font=font, fill="#FFFFFF")
+    y += 2*font.getsize("str")[1]
     draw.text((x, y), str(stress), font=font, fill="#FFFFFF")
     y += font.getsize("str")[1]
 
@@ -86,12 +91,19 @@ while True:
         emote = ":-("
 
     draw.text((x, y), emote, font=font, fill="#FFFFFF")
+    y += 2*font.getsize("str")[1]
+    draw.text((x, y), str("+"), font=font, fill="#FFFFFF")
 
     if buttonA.value:
         stress += 1
     if buttonB.value:
         stress -= 1
 
+    if stress > 100:
+        stress = 0
+    if stress < 0:
+        stress = 100
+
     # Display image.
     disp.image(image, rotation)
-    #time.sleep(1)
+    time.sleep(0.1)
