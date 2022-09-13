@@ -202,12 +202,16 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
-[![Stress Clock]()](https://drive.google.com/file/d/1CLxKgQ1OgxfAZEjlu4jlb90icOYqB_Vn/view?usp=sharing)
+[![Stress Clock]](https://drive.google.com/file/d/1CLxKgQ1OgxfAZEjlu4jlb90icOYqB_Vn/view?usp=sharing)
 
 A clock that keeps track of passing time by how stressed the user is. The more stress that gets added onto them during their day, the later the clock will show.
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+
+The main idea behind the clock is that throughout the day we tend to become more tired and more stressed out. Keeping track of the things that stress us out and exhaust us might end up being a decent indication of how much time has passed! Showing your current stress level helps you keep track of the current time, while providing preset amounts to add to the total based on common events helps you keep the time up to date.
+
+![Stress Sketches](./images/stressSketches.png "Stress Sketches")
 
 
 # Prep for Part 2
