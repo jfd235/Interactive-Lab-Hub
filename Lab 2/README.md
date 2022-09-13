@@ -202,7 +202,7 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
-[![Stress Clock]](https://drive.google.com/file/d/1CLxKgQ1OgxfAZEjlu4jlb90icOYqB_Vn/view?usp=sharing)
+[Stress Clock Video](https://drive.google.com/file/d/1CLxKgQ1OgxfAZEjlu4jlb90icOYqB_Vn/view?usp=sharing)
 
 A clock that keeps track of passing time by how stressed the user is. The more stress that gets added onto them during their day, the later the clock will show.
 
