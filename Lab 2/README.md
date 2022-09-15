@@ -1,4 +1,5 @@
 # Interactive Prototyping: The Clock of Pi
+**NAMES OF COLLABORATORS HERE**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -11,19 +12,13 @@ Be generous in acknowledging their contributions! And also recognizing any other
 
 ## Prep
 
-[Lab prep](prep.md) is extra long this week! Make sure you read it over in time to prepare for lab on Thursday.
+Lab Prep is extra long this week. Make sure to start this early for lab on Thursday.
 
-### Get your kit
-If you are remote but in the US, let the teaching team know you need the parts mailed.
+1. ### Set up your Lab 2 Github
 
-
-If you are in New York, you can come to the campus and pick up your parts. If you have not picked up your parts by Thursday lab you should come to Tata 351.
+Before the start of lab Thursday, [pull changes from the Interactive Lab Hub](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Fall/readings/Submitting%20Labs.md#to-pull-lab-updates) so that you have your own copy of Lab 2 on your own lab hub.
 
 
-### Set up your Lab 2
-
-1. [Pull changes from the Interactive Lab Hub](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Fall/readings/Submitting%20Labs.md#to-pull-lab-updates) so that you have your own copy of Lab 2 on your own lab hub. (This may have to be done again at the start of lab on Thursday.)
-  
   If you are organizing your Lab Hub through folder in local machine, go to terminal, cd into your Interactive-Lab-Hub folder and run:
 
   ```
@@ -40,7 +35,16 @@ If you are in New York, you can come to the campus and pick up your parts. If yo
   ```
   Your local and remote should now be up to date with the most recent files.
 
-2. Go to the [lab prep page](prep.md) to inventory your parts and set up your Pi before the lab session on Thursday.
+
+2. ### Get Kit and Inventory Parts
+Prior to the lab session on Thursday, taken inventory of the kit parts that you have, and note anything that is missing:
+
+***Update your [parts list inventory](partslist.md)***
+
+3. ### Prepare your Pi for lab this week
+[Follow these instructions](prep.md) to download and burn the image for your Raspberry Pi before lab Thursday.
+
+
 
 
 ## Overview
@@ -112,7 +116,7 @@ We have asked you to equip the [Adafruit MiniPiTFT](https://www.adafruit.com/pro
 
 <img src="https://cdn-learn.adafruit.com/assets/assets/000/082/842/large1024/adafruit_products_4393_iso_ORIG_2019_10.jpg" height="200" />
 
-The Raspberry Pi 4 has a variety of interfacing options. When you plug the pi in the red power LED turns on. Any time the SD card is accessed the green LED flashes. It has standard USB ports and HDMI ports. Less familiar it has a set of 20x2 pin headers that allow you to connect a various peripherals.
+The Raspberry Pi 3 has a variety of interfacing options. When you plug the pi in the red power LED turns on. Any time the SD card is accessed the green LED flashes. It has standard USB ports and HDMI ports. Less familiar it has a set of 20x2 pin headers that allow you to connect a various peripherals.
 
 <img src="https://maker.pro/storage/g9KLAxU/g9KLAxUiJb9e4Zp1xcxrMhbCDyc3QWPdSunYAoew.png" height="400" />
 
@@ -120,7 +124,7 @@ To learn more about any individual pin and what it is for go to [pinout.xyz](htt
 
 ### Hardware (you have done this in the prep)
 
-From your kit take out the display and the [Raspberry Pi 4](https://cdn-shop.adafruit.com/1200x900/4296-13.jpg)
+From your kit take out the display and the [Raspberry Pi 3](https://cdn-shop.adafruit.com/970x728/3775-07.jpg)
 
 Line up the screen and press it on the headers. The hole in the screen should match up with the hole on the raspberry pi.
 
@@ -180,6 +184,8 @@ Now you should be able to edit python scripts with Thonny on your Pi.
 Does time have to be linear?  How do you measure a year? [In daylights? In midnights? In cups of coffee?](https://www.youtube.com/watch?v=wsj15wPpjLY)
 
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
+
+Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
