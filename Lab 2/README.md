@@ -239,4 +239,7 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
+I did my best to push the clock to resemble the sketches, although I found working a menu to be a bit too clunky, so I reduced it to an information screen. I also messed around with some fonts, and I found that you can actually display some emojis as characters. After some experimenting I found which ones worked and which ones didn't and got that in line with how I wanted the project to turn out. I also worked on the sizing and spacing of the screen components to make it visually easy to use. See the video link below for a quick demo!
+
+https://drive.google.com/file/d/1jloOAr5yWq_2txhUC-UuXQWNOlXb9awi/view?usp=sharing
 
