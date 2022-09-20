@@ -227,7 +227,7 @@ The main idea behind the clock is that throughout the day we tend to become more
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
-Feedback: There was a bit of concern for how the user will interact with the menu screen as there are only two buttons on the interface. To make sure things run smoothly, I'll need to do some experimenting to see what combinations of button presses/holds allow for the most intuitive navigations of the screens.
+Feedback: I got feedback from Vikran, Sam, and Jackson. The main thing that stuck out to me was that there was a bit of concern for how the user will interact with the menu screen as there are only two buttons on the interface. To make sure things run smoothly, I'll need to do some experimenting to see what combinations of button presses/holds allow for the most intuitive navigations of the screens.
 
 # Lab 2 Part 2
 
