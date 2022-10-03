@@ -1,5 +1,5 @@
 # from https://elinux.org/RPi_Text_to_Speech_(Speech_Synthesis)
-espeak -ven+f2 -k5 -s150 --stdout  "test" | aplay
+espeak -ven+f2 -k5 -s150 --stdout  "begin" | aplay
 
 #arecord -f cd -r 44100 -d 5 -t wav recorded.wav && sox recorded.wav recorded_mono.wav remix 1,2
 
