@@ -141,8 +141,16 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+The actual speech interaction was very clunky and just didn't work well. Making it so the user speaks, the program computes, user speaks, program computes, etc. just doesn't really work. It would be much smoother to have the user speak everything at once, and then have the program do the computation on all of the data. I think that this would be easier to implement in code as well.
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+Adding a button to begin the interaction would help the user know when to speak as well as make implementation a lot easer, that way I don't have to be constantly scanning for words.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
+
+![New Diagrams](./images/newDiagrams.png "New Diagrams")
 
 ## Prototype your system
 
@@ -153,7 +161,13 @@ The system should:
 
 *Document how the system works*
 
+I actually got the prototype to work, without the need for any wizarding. The program first waits for a button to be pressed, and when this happens it calls a shell script which records audio and sends it to another python script. This script decifers the data based on a vocabulary containing digits and operators. This data is then split to form an actual equation, which is completed and the output is spoken to the user.
+
 *Include videos or screencaptures of both the system and the controller.*
+
+Here's a video of the working prototype
+
+https://drive.google.com/file/d/1SKr6OxBdkWYZdQpPybAg6zBsD2bdy5k1/view?usp=sharing
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -161,18 +175,18 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+The biggest success was that it actually worked! The speech recognition worked way better than expected, and would even usually work if the equation was spoken at a normal speed. The biggest annoyances were that you had to speak the digits and not the actual numbers (i.e. "one three" instead of "thirteen") as well as the slow computation speed of the voice recognition system.
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+I didn't use a controller, as I was able to make my implentation work.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
-
+Even though I didn't use a WoZ interaction, from the initial test I did where I acted out the device it was easy to pick up on what worked and what didn't. In this case I was able to pick up how annoying the multiple prompts and voice inputs were, and consoldated them to one input which made the interaction a lot smoother.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+I think it would be cool to extend this functionality to use the camera as well to read equations and solve them similar to the voice interaction. This would allow for a new way to perform calculations hands free, although it would depend a lot on the user's handwriting, lighting conditions, etc. However, it would work just fine in noisy conditions. Using both vision and hearing might help to fill in the gaps of each sensing modality's weakness.
 
