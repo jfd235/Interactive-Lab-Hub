@@ -76,14 +76,16 @@ def testVals(vals):
         guess = getInput()
         print(guess)
         if guess != val:
+            print("FALSE: " + guess + " != " + val)
             return False
+        print("TRUE: " + guess + " = " + val)
     return True
 
-inGame = True
 vals = []
 highScore = 0
 
 def game():
+    inGame = True
     score = 0
     while(inGame):
         newVal(vals)
@@ -92,6 +94,9 @@ def game():
         inGame = testVals(vals)
         if inGame:
             score += 1
+        else:
+            return -1
+    return score
 
 # Time variable
 stress = 0
@@ -128,8 +133,8 @@ while True:
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
     
-    if buttonA.value:
-        highScore = max(highScore, inGame())
+    if buttonA.value == False:
+        highScore = max(highScore, game())
         #print("up")
 
     # Both buttons for select screen
