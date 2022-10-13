@@ -248,7 +248,7 @@ Build a cardbord prototype of your design.
 
 ![prototype](./images/prototype.png "prototype")
 
-For the sake of convenience, some slight adjustments were made. Namely I put the screen off to the left and the sensor on the right, just due to the position of the screen on the Pi. I also reduced the amount of utilized buttons from 10-6 to avoid problems of hitting multiple buttons on accident.
+For the sake of convenience, some slight adjustments were made from the original sketches. Namely I put the screen off to the left and the sensor on the right, just due to the position of the screen on the Pi. I also reduced the amount of utilized buttons from 10 down to 6 to avoid problems of hitting multiple buttons on accident.
 
 LAB PART 2
 
