@@ -176,9 +176,16 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+![devices1](./images/devices1.png "devices1")
+![devices2](./images/devices2.png "devices2")
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
+Would the sensors work best if installed and the casing overlayed on top of them, or if they were secured to the casing and connected after? I would need to physically prototype a faceplate with the devices to understand the answer to this question. I would also want to understand what size faceplate would make for optimal interactions. Playing with different sizes or configurations would help to answer this question.
+
 **\*\*\*Pick one of these designs to prototype.\*\*\***
+
+I will prototype the first device, which is the memory game.
 
 
 ### Part D
@@ -221,16 +228,25 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+![arrangements](./images/arrangements.png "arrangements")
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+How large should I make the faceplate? Should I make the faceplate fully encase the Pi or just lay on top? What conductive materials would be best to use and how would they connect? Would the device be better as a handheld or sitting on a surface? All of these questions could be answered by simply creating a cardboard faceplate/casing, and testing out different conductive materials.
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+The first design in the image above.
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+I chose this design as it is compact, allows the device to be used directly without the need of conductive materials, and allows the possibility of handheld use where the user would hold the device and interact with the sensor using their thumbs.
 
 Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+![prototype](./images/prototype.png "prototype")
 
 LAB PART 2
 
