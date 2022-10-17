@@ -59,11 +59,21 @@ def getInput():
             if mpr121[i].value:
                 return mapping[i]
 
-def displayVals(vals):
+def displayVals(vals, score):
+    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+    disp.image(image, rotation)
     for val in vals:
         print(val)
+        y = -2
+        draw.text((x, y), str("Score: " + str(score)), font=medFont, fill="#FFFFFF")
+        y+= medFont.getsize("str")[1]
         draw.text((x, y), str(val), font=medFont, fill="#FFFFFF")
+        disp.image(image, rotation)
         time.sleep(1)
+        draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+        y = -2
+        draw.text((x, y), str("Score: " + str(score)), font=medFont, fill="#FFFFFF")
+        disp.image(image, rotation)
 
 def newVal(vals):
     newVal = str(random.randrange(1, 7))
@@ -79,23 +89,31 @@ def testVals(vals):
             print("FALSE: " + guess + " != " + val)
             return False
         print("TRUE: " + guess + " = " + val)
+        time.sleep(0.2)
     return True
 
-vals = []
 highScore = 0
 
 def game():
+    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+    disp.image(image, rotation)
+    vals = []
     inGame = True
     score = 0
     while(inGame):
+        #draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+        #draw.text((x, y), str("Score: " + str(score)), font=medFont, fill="#FFFFFF")
+        #disp.image(image, rotation)
+        #time.sleep(1)
+
         newVal(vals)
         print(vals)
-        time.sleep(1)
+        displayVals(vals, score)
         inGame = testVals(vals)
         if inGame:
             score += 1
         else:
-            return -1
+            break
     return score
 
 # Time variable
@@ -126,6 +144,10 @@ backlight.switch_to_output()
 backlight.value = True
 
 while True:
+    if buttonA.value == False:
+        highScore = max(highScore, game())
+        #print("up")
+
     # Draw a black filled box to clear the image.
     #draw.rectangle((0, 0, width, height), outline=0, fill=0)
     draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
@@ -133,10 +155,6 @@ while True:
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
     
-    if buttonA.value == False:
-        highScore = max(highScore, game())
-        #print("up")
-
     # Both buttons for select screen
     draw.text((x, y), str("High Score: " + str(highScore)), font=medFont, fill="#FFFFFF")
     y+= medFont.getsize("str")[1]
