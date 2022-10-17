@@ -87,9 +87,12 @@ def testVals(vals):
         print(guess)
         if guess != val:
             print("FALSE: " + guess + " != " + val)
+            draw.rectangle((0, 0, width, height), outline=0, fill=(255, 0, 0))
+            disp.image(image, rotation)
+            time.sleep(1)
             return False
         print("TRUE: " + guess + " = " + val)
-        draw.rectangle((0, 0, width, height), outline=0, fill=(0, 1, 0))
+        draw.rectangle((0, 0, width, height), outline=0, fill=(0, 255, 0))
         disp.image(image, rotation)
         time.sleep(0.2)
         draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
@@ -106,7 +109,7 @@ def game():
     score = 0
     while(inGame):
         #draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-        #draw.text((x, y), str("Score: " + str(score)), font=medFont, fill="#FFFFFF")
+        #draw.text((x, -2), str("Score: " + str(score)), font=medFont, fill="#FFFFFF")
         #disp.image(image, rotation)
         #time.sleep(1)
 
