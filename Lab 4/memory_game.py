@@ -123,10 +123,6 @@ def game():
             break
     return score
 
-# Time variable
-stress = 0
-emote = "😊"
-
 # Draw a black filled box to clear the image.
 draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
 disp.image(image, rotation)
@@ -151,25 +147,16 @@ backlight.switch_to_output()
 backlight.value = True
 
 while True:
+    # Start new game
     if buttonA.value == False:
         highScore = max(highScore, game())
-        #print("up")
 
     # Draw a black filled box to clear the image.
-    #draw.rectangle((0, 0, width, height), outline=0, fill=0)
     draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
     y =top
-
-    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
     
-    # Both buttons for select screen
+    # Print high score
     draw.text((x, y), str("High Score: " + str(highScore)), font=medFont, fill="#FFFFFF")
-    y+= medFont.getsize("str")[1]
-    # draw.text((x, y), str("Use the buttons to track"), font=font, fill="#FFFFFF")
-    # y += font.getsize("str")[1]
-    # draw.text((x, y), str("how stressed you are"), font=font, fill="#FFFFFF")
-    # y += font.getsize("str")[1]
-    # draw.text((x, y), str("throughout the day!"), font=font, fill="#FFFFFF")
 
     # Display image.
     disp.image(image, rotation)
