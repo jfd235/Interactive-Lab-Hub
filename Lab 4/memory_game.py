@@ -79,6 +79,11 @@ def testVals(vals):
             print("FALSE: " + guess + " != " + val)
             return False
         print("TRUE: " + guess + " = " + val)
+        draw.rectangle((0, 0, width, height), outline=0, fill=(0, 1, 0))
+        disp.image(image, rotation)
+        time.sleep(0.2)
+        draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+        disp.image(image, rotation)
     return True
 
 vals = []
