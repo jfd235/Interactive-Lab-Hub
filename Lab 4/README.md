@@ -293,3 +293,16 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
+## Test Your Memory!
+
+How sharp is your memory? Find out by playing my fun little memory game. The goal of the game is to correctly enter a growing series of numbers. Each turn you will see a sequence of numbers, and you have to enter that sequence on the touchpad. The next turn, a new random number will be added onto the sequence. Once you enter a wrong number, the game will end!
+
+See the sketch below for a general flow of the sequence generation process.
+
+![flow](./images/flow.png "flow")
+
+As you can see from the design in Part 1, the device is meant to be handheld, but could just as easily be played while placed on a surface. The design features a cutout for the screen, while the touch sensor is mounted on top of the cardboard for ease of access. If I was to redo my physical design, I would like to try and find a clean way to add separate "buttons" to the device as opposed to just directly tapping on the sensor. However, after exploring with the resources that I had, I was unable to find a way to make this work better than using the sensor itself.
+
+Here's a video of my game in action!
+
+https://drive.google.com/file/d/1-HMSILdThFV-ZaMHgIqe3qu8dNMv-utF/view?usp=sharing
