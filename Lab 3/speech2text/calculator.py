@@ -76,7 +76,7 @@ while True:
     draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
     y =top
 
-    if buttonA.value or buttonB.value:
+    if buttonA.value == False or buttonB.value == False:
         os.system("./vosk_demo_mic.sh")
         #print("up")
     # if buttonB.value:
