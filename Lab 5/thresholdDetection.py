@@ -63,8 +63,19 @@ def main():
 
                 volume = np.rint(np.sqrt(np.mean(buffer**2))*10000) # Compute the rms volume
 
-                print(volume)
-                if volume > thresh:
+                VolumeHistory.append(volume)
+                volumneSlow = volume
+                volumechange = 0.0
+                if VolumeHistory.is_full:
+                    HalfLength = int(np.round(VolumeHistory.maxlen/2)) 
+                    vnew = np.array(VolumeHistory)[HalfLength:].mean()
+                    vold = np.array(VolumeHistory)[:VolumeHistory.maxlen-HalfLength].mean()
+                    volumechange =vnew-vold
+                    volumneSlow = np.array(VolumeHistory).mean()
+                    maxVol = max(VolumeHistory)
+
+                print(maxVol)
+                if maxVol > thresh:
                     print("Threshold exceded!")
                 
                 nextTimeStamp = UPDATE_INTERVAL+time.time() # See `UPDATE_INTERVAL` above
