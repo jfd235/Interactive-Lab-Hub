@@ -62,45 +62,7 @@ def main():
 
 
                 volume = np.rint(np.sqrt(np.mean(buffer**2))*10000) # Compute the rms volume
-                
-                
-                # VolumeHistory.append(volume)
-                # volumneSlow = volume
-                # volumechange = 0.0
-                # if VolumeHistory.is_full:
-                #     HalfLength = int(np.round(VolumeHistory.maxlen/2)) 
-                #     vnew = np.array(VolumeHistory)[HalfLength:].mean()
-                #     vold = np.array(VolumeHistory)[:VolumeHistory.maxlen-HalfLength].mean()
-                #     volumechange =vnew-vold
-                #     volumneSlow = np.array(VolumeHistory).mean()
-                
-                # ## Computes the Frequency Foruier analysis on the Audio Signal.
-                # N = buffer.shape[0] 
-                # window = hann(N) 
-                # amplitudes = np.abs(rfft(buffer*window))[25:] #Contains the volume for the different frequency bin.
-                # frequencies = (rfftfreq(N, 1/SAMPLING_RATE)[:N//2])[25:] #Contains the Hz frequency values. for the different frequency bin.
-                # '''
-                # Combining  the `amplitudes` and `frequencies` varialbes allows you to understand how loud a certain frequency is.
 
-                # e.g. If you'd like to know the volume for 500Hz you could do the following. 
-                # 1. Find the frequency bin in which 500Hz belis closest to with:
-                # FrequencyBin = np.abs(frequencies - 500).argmin()
-                
-                # 2. Look up the volume in that bin:
-                # amplitudes[FrequencyBin]
-
-
-                # The example below does something similar, just in revers.
-                # It finds the loudest amplitued and its coresponding bin  with `argmax()`. 
-                # The uses the index to look up the Freqeucny value.
-                # '''
-
-
-                # LoudestFrequency = frequencies[amplitudes.argmax()]
-                
-                # print("Loudest Frqeuncy:",LoudestFrequency)
-                # print("RMS volume:",volumneSlow)
-                # print("Volume Change:",volumechange)
                 print(volume)
                 if volume > thresh:
                     print("Threshold exceded!")
