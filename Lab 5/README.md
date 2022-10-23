@@ -102,6 +102,22 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+![contours](./images/contours.png "contours")
+
+In the above picture, the system does a good job at tracking the wires and cables in the image. Maybe if used on a PCB, the system could help track traces and daignose possible issues.
+
+![face-detection](./images/face-detection.png "face-detection")
+
+This system could be used in bars/restaurants to help determine when the venue as at capacity, as well as how many people can be let in before capacity is reached.
+
+![optical-flow](./images/optical-flow.png "optical-flow")
+
+This could be used in intersections to help understand which directions see higher traffic flow at different times of day to help optimize the traffic system.
+
+![detected](./images/detected.png "detected")
+
+This could be used in a warehouse setting to identifity how many boxes/items are remaining in a certain area, allowing workers to better anticipate when to restock various items.
+
 #### Filtering, FFTs, and Time Series data. 
 Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU or Microphone data stream could create a simple activity classifier between walking, running, and standing.
 
