@@ -12,7 +12,7 @@ import time
 DEVICE_INDEX = 2
 
 ## Compute the audio statistics every `UPDATE_INTERVAL` seconds.
-UPDATE_INTERVAL = 1.0
+UPDATE_INTERVAL = 0.1
 
 ## Fixed volume threshold value
 thresh = 100
@@ -32,15 +32,15 @@ def main():
         audioQueue.put(in_data)
         return None, pyaudio.paContinue
 
-    stream = pyaudio_instance.open(input=True,start=False,format=pyaudio.paFloat32,channels=CHANNELS,rate=SAMPLING_RATE,frames_per_buffer=int(SAMPLING_RATE/2),stream_callback=_callback,input_device_index=DEVICE_INDEX)
+    stream = pyaudio_instance.open(input=True,start=False,format=pyaudio.paFloat32,channels=CHANNELS,rate=SAMPLING_RATE,frames_per_buffer=int(SAMPLING_RATE/200),stream_callback=_callback,input_device_index=DEVICE_INDEX)
     
     
     # One essential way to keep track of variables overtime is with a ringbuffer. 
     # As an example the `AudioBuffer` it stores always the last second of audio data. 
-    AudioBuffer = RingBuffer(capacity=SAMPLING_RATE*1, dtype=FORMAT) # 1 second long buffer.
+    AudioBuffer = RingBuffer(capacity=int(SAMPLING_RATE*0.1), dtype=FORMAT) # 1 second long buffer.
     
     # Another example is the `VolumeHistory` ringbuffer. 
-    VolumeHistory = RingBuffer(capacity=int(20/UPDATE_INTERVAL), dtype=FORMAT) ## This is how you can compute a history to record changes over time
+    VolumeHistory = RingBuffer(capacity=int(1/UPDATE_INTERVAL), dtype=FORMAT) ## This is how you can compute a history to record changes over time
     ### Here  is a good spot to extend other buffers  aswell that keeps track of varailbes over a certain period of time. 
 
     nextTimeStamp = time.time()
@@ -67,14 +67,15 @@ def main():
                 maxVol = volume
                 volumechange = 0.0
                 if VolumeHistory.is_full:
-                    HalfLength = int(np.round(VolumeHistory.maxlen/2)) 
-                    vnew = np.array(VolumeHistory)[HalfLength:].mean()
-                    vold = np.array(VolumeHistory)[:VolumeHistory.maxlen-HalfLength].mean()
-                    volumechange =vnew-vold
-                    volumneSlow = np.array(VolumeHistory).mean()
+                    #HalfLength = int(np.round(VolumeHistory.maxlen/2)) 
+                    #vnew = np.array(VolumeHistory)[HalfLength:].mean()
+                    #vold = np.array(VolumeHistory)[:VolumeHistory.maxlen-HalfLength].mean()
+                    #volumechange =vnew-vold
+                    #volumneSlow = np.array(VolumeHistory).mean()
+                    #VolumeHistory = VolumeHistory[1:]
                     maxVol = max(VolumeHistory)
 
-                print(maxVol)
+                print(VolumeHistory)
                 if maxVol > thresh:
                     print("Threshold exceded!")
                 
