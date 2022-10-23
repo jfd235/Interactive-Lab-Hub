@@ -1,6 +1,6 @@
 | **Context** <br/> (situational) | **Presence** <br/>(intent)               | **Behavior** <br/> (reaction) |
 |----------------------------|-------------------------------------|-------------------------|
-| **Who is involved:** <br/>  to make <br/> new lines <br/> use ``<br/>`` between words   | **Task goals:**       | **Implicit behaviors:** |
-| **What is making noises:** | **When to stand-out (attention):**  | **Explicit Actions:**   |
-| **When:**                  | **When to blend in (distraction):** |                         |
-| **Where:**                 |                                     |                         |
+| **Who is involved:** <br/> Anyone operating a door in a quiet space, as well as those around them | **Task goals:** <br/> To alert people when they are closing a door too loudly | **Implicit behaviors:** <br/> The device will be constantly scanning the sound input and comparing the volume level to the preset threshold |
+| **What is making noises:** <br/> Doors being opened/closed | **When to stand-out (attention):** <br/> When someone closes a door too loudly, they will be alerted in a way that doesn't add to the distraction of others | **Explicit Actions:** <br/> The device will flash a red light at the user when the device determines that the noise threshold has been exceeded |
+| **When:** <br/> At any time where those around the door are expecting silence | **When to blend in (distraction):** <br/> At all other times there will be no indication of activity from the device |                         |
+| **Where:** <br/> Any place where being loud would be disrespectful (classrooms, theatres, libraries, etc.) |                                     |                         |
