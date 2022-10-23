@@ -14,7 +14,8 @@ DEVICE_INDEX = 2
 ## Compute the audio statistics every `UPDATE_INTERVAL` seconds.
 UPDATE_INTERVAL = 1.0
 
-
+## Fixed volume threshold value
+thresh = 100
 
 ### Things you probably don't need to change
 FORMAT=np.float32
@@ -101,7 +102,7 @@ def main():
                 # print("RMS volume:",volumneSlow)
                 # print("Volume Change:",volumechange)
                 print(volume)
-                if volume > 10:
+                if volume > thresh:
                     print("Threshold exceded!")
                 
                 nextTimeStamp = UPDATE_INTERVAL+time.time() # See `UPDATE_INTERVAL` above
