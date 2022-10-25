@@ -3,6 +3,7 @@ import numpy as np
 from scipy.fft import rfft, rfftfreq
 from scipy.signal.windows import hann
 from numpy_ringbuffer import RingBuffer
+import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
