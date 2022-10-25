@@ -3,6 +3,7 @@ import numpy as np
 from scipy.fft import rfft, rfftfreq
 from scipy.signal.windows import hann
 from numpy_ringbuffer import RingBuffer
+import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 
@@ -11,6 +12,9 @@ import time
 
 # Config for display baudrate (default max is 24mhz):
 BAUDRATE = 64000000
+
+# Setup SPI bus using hardware SPI:
+spi = board.SPI()
 
 # Create the ST7789 display:
 disp = st7789.ST7789(
