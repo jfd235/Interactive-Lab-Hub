@@ -3,10 +3,37 @@ import numpy as np
 from scipy.fft import rfft, rfftfreq
 from scipy.signal.windows import hann
 from numpy_ringbuffer import RingBuffer
+from PIL import Image, ImageDraw, ImageFont
+import adafruit_rgb_display.st7789 as st7789
 
 import queue
 import time
 
+# Config for display baudrate (default max is 24mhz):
+BAUDRATE = 64000000
+
+# Create the ST7789 display:
+disp = st7789.ST7789(
+    spi,
+    cs=cs_pin,
+    dc=dc_pin,
+    rst=reset_pin,
+    baudrate=BAUDRATE,
+    width=135,
+    height=240,
+    x_offset=53,
+    y_offset=40,
+)
+
+# Create blank image for drawing.
+# Make sure to create image with mode 'RGB' for full color.
+height = disp.width  # we swap height/width to rotate it to landscape!
+width = disp.height
+image = Image.new("RGB", (width, height))
+rotation = 90
+
+# Get drawing object to draw on image.
+draw = ImageDraw.Draw(image)
 
 ## Please change the following number so that it matches to the microphone that you are using. 
 DEVICE_INDEX = 2
@@ -78,6 +105,11 @@ def main():
                 print(VolumeHistory)
                 if maxVol > thresh:
                     print("Threshold exceded!")
+                    draw.rectangle((0, 0, width, height), outline=0, fill=(255, 0, 0))
+                    disp.image(image, rotation)
+                else:
+                    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+                    disp.image(image, rotation)
                 
                 nextTimeStamp = UPDATE_INTERVAL+time.time() # See `UPDATE_INTERVAL` above
 
