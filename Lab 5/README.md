@@ -259,15 +259,37 @@ For my experimentation, I well set the device on the ground next to a where a do
 Now flight test your interactive prototype and **note down your observations**:
 For example:
 1. When does it what it is supposed to do?
+
+It works well when there is silence, followed by a door being closed loudly, followed by more silence.
+
 1. When does it fail?
+
+If the door is closed multiple times in quick succession.
+
 1. When it fails, why does it fail?
+
+The volume buffer takes time to reset, so if the door is closed multiple times in rapid succession, the device may not pickup on all of the inputs.
+
 1. Based on the behavior you have seen, what other scenarios could cause problems?
+
+If the environment is very loud, then the system may mistake the loud noises for the door being closed.
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
+
+Likely not. The user will use the door as they normally would.
+
 1. How bad would they be impacted by a miss classification?
+
+They may just be confused, or wouldn't realize that they were closing the door loudly.
+
 1. How could change your interactive system to address this?
+
+Make sure that the deviced is placed in a way to best record the door volume, and make sure that there are fail-safes in place so that the system won't get caught in a constant state of thinking the door was being slammed.
+
 1. Are there optimizations you can try to do on your sense-making algorithm.
+
+Tweak the rate at which the stream of audio is recorded and sampled, so that the values computed by the device better represent the real world (i.e. a checking the volume of a smaller sample, like every 0.1 second, as opposed to every second).
 
 ### Part D
 ### Characterize your own Observant system
