@@ -7,6 +7,8 @@ import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
+import random
+import os
 
 import queue
 import time
@@ -53,6 +55,7 @@ UPDATE_INTERVAL = 0.1
 
 ## Fixed volume threshold value
 thresh = 100
+flag = True
 
 ### Things you probably don't need to change
 FORMAT=np.float32
@@ -82,6 +85,7 @@ def main():
 
     nextTimeStamp = time.time()
     stream.start_stream()
+    prevMax = 0
     if True:
         while True:
             frames = audioQueue.get() #Get DataFrom the audioDriver (see _callbackfunction how the data arrives)
@@ -113,15 +117,22 @@ def main():
                     maxVol = max(VolumeHistory)
 
                 print(VolumeHistory)
-                if maxVol > thresh:
+                flag = maxVol != prevMax
+                if maxVol > thresh and flag:
                     print("Threshold exceded!")
                     draw.rectangle((0, 0, width, height), outline=0, fill=(255, 0, 0))
                     disp.image(image, rotation)
+                    randstr = str(random.randint(1,5))
+                    os.system("aplay sounds/fart" + randstr + ".wav")
+                    flag = False # Play only one sound
                 else:
+                    flag = True
                     draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
                     disp.image(image, rotation)
                 
                 nextTimeStamp = UPDATE_INTERVAL+time.time() # See `UPDATE_INTERVAL` above
+                prevMax = maxVol
+                print("M: " + str(maxVol) + " P: " + str(prevMax))
 
 
 if __name__ == '__main__':
