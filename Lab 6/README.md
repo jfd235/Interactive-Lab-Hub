@@ -96,6 +96,16 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+1. Door touch sensor - connect the capacitive touch sensor to the inner handle of a door. If the handles are connected through the door, then the sensor will be able to tell when somebody is touching the outer doorknob, and can alert the user through messaging if somebody is trying to enter
+
+2. Room occupation - Place light sensors within a set of conference rooms, and stream this data to the user's device with the messaging system. The user will then be able to tell how many conference rooms are free/full based on whether or not the lights are on without having to make the trip and look around.
+
+3. Preheat alert - The device could be connected to an oven, and could remotely alert the user when their oven has finished preheating, as well as giving them live updates on the temperature, all through the messaging system.
+
+4. Cat door alerts - A senser could be placed on a cat door, and could message the user's device when it detects their cat entering/exiting through the cat door. This way the user could know whether or not their cat is home or out and about.
+
+5. Trash can capacity - Numerous devices could be attached to weight sensors placed under trash cans, to help indicate how full the trash cans are. This data could be sent to a central device via messaging, allowing the user to know when they need to empty the trash cans.
+
 ### Part C
 ### Streaming a Sensor
 
