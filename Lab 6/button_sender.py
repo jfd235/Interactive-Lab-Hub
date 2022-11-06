@@ -21,9 +21,10 @@ i2c = busio.I2C(board.SCL, board.SDA)
 button = qwiic_button.QwiicButton()
 
 while True:
-    for i in range(12):
-        if button.is_button_pressed():
-        	val = f"Button touched!"
-        	print(val)
-        	client.publish(topic, val)
+    if button.is_button_pressed():
+        val = f"Button touched!"
+        button.LED_on(100)
+        print(val)
+        client.publish(topic, val)
     time.sleep(0.25)
+    button.LED_off()
