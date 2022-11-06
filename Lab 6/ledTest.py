@@ -3,10 +3,42 @@ import qwiic_led_stick
 import time
 import sys
 
+def cycle_rainbow(LED_stick, delay):
+    # Red to yellow
+    for g in range(0, 255):
+        LED_stick.set_all_LED_color(255, g, 0)
+        time.sleep(delay)
+    
+    # Yellow to green
+    for r in range(255, 0, -1):
+        LED_stick.set_all_LED_color(r, 255, 0)
+        time.sleep(delay)
+    
+    # Green to cyan
+    for b in range(0, 255):
+        LED_stick.set_all_LED_color(0, 255, b)
+        time.sleep(delay)
+    
+    # Cyan to blue
+    for g in range(255, 0, -1):
+        LED_stick.set_all_LED_color(0, g, 255)
+        time.sleep(delay)
+    
+    # Blue to magenta
+    for r in range(0, 255):
+        LED_stick.set_all_LED_color(r, 0, 255)
+        time.sleep(delay)
+    
+    # Magenta to red
+    for b in range(255, 0, -1):
+        LED_stick.set_all_LED_color(255, 0, b)
+        time.sleep(delay)
+        
 def run_example():
 
-    print("\nSparkFun Qwiic LED Stick Example 3")
+    print("\nSparkFun Qwiic LED Stick Example 7")
     my_stick = qwiic_led_stick.QwiicLEDStick()
+    my_stick.set_all_LED_brightness(16)
 
     if my_stick.begin() == False:
         print("\nThe Qwiic LED Stick isn't connected to the system. Please check your connection", \
@@ -14,27 +46,12 @@ def run_example():
         return
     print("\nLED Stick ready!")
 
-    # Initialize LEDs as a rainbow followed by 1 white pixel
-    red_list = [255, 255, 170, 0, 0, 0, 0, 170, 255, 255]
-    green_list = [0, 170, 255, 255, 255, 170, 0, 0, 0, 255]
-    blue_list = [0, 0, 0, 0, 170, 255, 255, 255, 170, 255]
-
-    # Turn on the LED Stick according to the 3 arrays
-    my_stick.set_all_LED_unique_color(red_list, green_list, blue_list, 10)
-
     while True:
-
-        # This will step through each available brightness setting
-        # Brightness values can be from 0 - 31
-        for i in range(0, 32):
-            my_stick.set_all_LED_brightness(i)
-
-            print("\nBrightness level: " + str(i))
-            time.sleep(1)
+        cycle_rainbow(my_stick, 0.01)
 
 if __name__ == '__main__':
     try:
         run_example()
     except (KeyboardInterrupt, SystemExit) as exErr:
-        print("\nEnding Example 4")
+        print("\nEnding Example 7")
         sys.exit(0)
