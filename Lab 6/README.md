@@ -129,6 +129,8 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 
+I used the Qwiic button, code can be found in button_sender.py
+
 
 ### Part D
 ### The One True ColorNet
@@ -160,6 +162,8 @@ You may ask "but what if I missed class?" Am I not admitted into the collective 
 Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-true-colornet.glitch.me/) and become one with the ColorNet on the inter-webs. Glitch is a great tool for prototyping sites, interfaces and web-apps that's worth taking some time to get familiar with if you have a chance. Its not super pertinent for the class but good to know either way. 
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
+
+Code can be found in readColor.py
 
 
 ### Part E
