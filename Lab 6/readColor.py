@@ -64,8 +64,9 @@ def on_connect(client, userdata, flags, rc):
 def on_message(cleint, userdata, msg):
     # if a message is recieved on the colors topic, parse it and set the color
     if msg.topic == topic:
-        colors = list(map(int, msg.payload.decode('UTF-8').split(',')))
-        draw.rectangle((0, 0, width, height), fill=color)
+        colors = tuple(map(int, msg.payload.decode('UTF-8').split(',')))
+        print(colors)
+        draw.rectangle((0, 0, width, height), fill=colors)
         disp.image(image)
 
 client = mqtt.Client(str(uuid.uuid1()))
