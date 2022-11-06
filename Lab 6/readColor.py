@@ -90,21 +90,21 @@ def handler(signum, frame):
 signal.signal(signal.SIGINT, handler)
 
 # our main loop
-# while True:
-#     r, g, b, a = sensor.color_data
+while True:
+    # r, g, b, a = sensor.color_data
     
-#     # there's a few things going on here 
-#     # colors are reported at 16bits (thats 65536 levels per color).
-#     # we need to convert that to 0-255. thats what the 255*(x/65536) is doing
-#     # color are also reported with an alpha (opacity, or in our case a proxy for ambient brightness)
-#     # 255*(1-(a/65536)) acts as scaling factor for brightness, it worked well enough in the lab but 
-#     # your success may vary depenging on how much ambient light there is, you can mess with these constants
-#     color =tuple(map(lambda x: int(255*(1-(a/65536))*255*(x/65536)) , [r,g,b,a]))
+    # # there's a few things going on here 
+    # # colors are reported at 16bits (thats 65536 levels per color).
+    # # we need to convert that to 0-255. thats what the 255*(x/65536) is doing
+    # # color are also reported with an alpha (opacity, or in our case a proxy for ambient brightness)
+    # # 255*(1-(a/65536)) acts as scaling factor for brightness, it worked well enough in the lab but 
+    # # your success may vary depenging on how much ambient light there is, you can mess with these constants
+    # color =tuple(map(lambda x: int(255*(1-(a/65536))*255*(x/65536)) , [r,g,b,a]))
 
-#     # if we press the button, send msg to cahnge everyones color
-#     if not buttonA.value:
-#         client.publish(topic, f"{r},{g},{b}")
-#     draw.rectangle((0, height*0.5, width, height), fill=color[:3])
-#     disp.image(image)
-#     time.sleep(.01)
+    # # if we press the button, send msg to cahnge everyones color
+    # if not buttonA.value:
+    #     client.publish(topic, f"{r},{g},{b}")
+    # draw.rectangle((0, height*0.5, width, height), fill=color[:3])
+    # disp.image(image)
+    time.sleep(.01)
     
